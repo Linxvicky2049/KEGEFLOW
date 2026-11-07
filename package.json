@@ -22,6 +22,7 @@
     "android": "expo run:android",
     "android:dev-apk": "expo run:android --variant debug",
     "prebuild:android": "expo prebuild --platform android",
+    "android:apk": "expo prebuild --platform android && cd android && gradlew.bat assembleDebug",
     "ios": "expo run:ios",
     "web": "expo start --web",
     "typecheck": "tsc --noEmit",
