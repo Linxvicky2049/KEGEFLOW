@@ -1,12 +1,17 @@
 {
-  "name": "kegeflow",
-  "version": "1.0.0",
+  "name": "kageflow-ai",
+  "version": "0.1.0",
   "main": "index.ts",
   "dependencies": {
     "expo": "~58.0.23",
+    "expo-file-system": "~58.0.13",
+    "expo-image-picker": "~58.0.10",
+    "expo-sqlite": "~58.0.15",
     "expo-status-bar": "~58.0.4",
+    "expo-system-ui": "~58.0.7",
     "react": "19.3.0",
-    "react-native": "0.88.1"
+    "react-native": "0.88.1",
+    "react-native-safe-area-context": "~5.11.1"
   },
   "devDependencies": {
     "@types/react": "~19.3.0",
@@ -14,9 +19,13 @@
   },
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "android": "expo run:android",
+    "android:dev-apk": "expo run:android --variant debug",
+    "prebuild:android": "expo prebuild --platform android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit",
+    "test:backend": "python -m pytest backend/tests -q"
   },
   "private": true
 }
